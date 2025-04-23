@@ -5,8 +5,6 @@ describe('Página de cadastro', () => {
     })
 
     it('Preencher os campos do formulário incorretamente e mostrar mensagens para o usuário', () => {
-        cy.get('[data-test="input-loginEmail"]').type('emi@email.com');
-        cy.get('[data-test="input-loginPassword"]').type('Senha123');
-        cy.get('[data-test="submit-button"]').click();
+        cy.login('emi@email.com', 'Senha123')
     })
   })
